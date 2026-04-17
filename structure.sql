@@ -47,3 +47,25 @@ CREATE TABLE enrollments (
 
     UNIQUE (student_id, course_id)
 );
+INSERT INTO roles (label) VALUES
+('Admin'),
+('Prof'),
+('Student');
+INSERT INTO users (first_name, last_name, email, password, role_id) VALUES
+('Othman','Hamadellah','othman@gmail.com','hashed123',1),
+('Karim','Bennani','karim@gmail.com','hashed123',2),
+('Sara','Alami','sara@gmail.com','hashed123',2),
+('Yassine','Tazi','yassine@gmail.com','hashed123',3),
+('Imane','Lahlou','imane@gmail.com','hashed123',3);
+INSERT INTO classes (name, classroom_number) VALUES
+('Développeur Web 2026','A1'),
+('Data Science 2026','B1'),
+('Réseaux 2026','C1');
+INSERT INTO students (id, dateofbirth, student_number, class_id) VALUES
+(4,'2002-05-10','ST001',1),
+(5,'2001-03-15','ST002',2);
+INSERT INTO enrollments (enrolled_at, status, student_id, course_id) VALUES
+('2026-01-10','Actif',1,1),
+('2026-01-10','Actif',1,2),
+('2026-01-11','Actif',2,3),
+('2026-01-11','Actif',2,4);
